@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Location Map &#8211; Mohammed I. Mukhtar</title>
+	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//category/location-map/feed/" rel="self" type="application/rss+xml" />
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<description>GIS Portfolio</description>
+	<lastBuildDate>Sun, 22 Dec 2024 17:02:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+
+<image>
+	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr.png</url>
+	<title>Location Map &#8211; Mohammed I. Mukhtar</title>
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>N&#8217;Djamena Location Map</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//ndjamena-location-map/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//ndjamena-location-map/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sat, 05 Oct 2024 17:01:52 +0000</pubDate>
+				<category><![CDATA[Location Map]]></category>
+		<category><![CDATA[QGIS]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1233</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:4vw;padding-right:4vw;padding-bottom:4vw;padding-left:4vw"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(90deg,rgb(0,159,255) 0%,rgb(236,47,75) 100%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<div class="wp-block-group is-content-justification-left is-layout-flex wp-container-core-group-is-layout-2 wp-block-group-is-layout-flex">
+<figure class="wp-block-image size-large is-resized wp-container-content-1"><img fetchpriority="high" decoding="async" width="1024" height="780" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-1024x780.jpg" alt="" class="wp-image-912" style="width:798px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-1024x780.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-300x229.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-768x585.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-1536x1170.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-2048x1560.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<div class="wp-block-group alignwide wp-container-content-2 is-content-justification-left"><div class="wp-block-group__inner-container is-layout-constrained wp-container-core-group-is-layout-1 wp-block-group-is-layout-constrained">
+<div style="height:24px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-left has-black-color has-text-color" style="font-size:18px;font-style:italic;font-weight:600">Data source: Natural Earth, Google Imagery. BaseMap: Stamen Watercolor.</p>
+</div></div>
+</div>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//ndjamena-location-map/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mapping layout for Monthly reports</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//1203-2/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//1203-2/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Wed, 25 Aug 2021 15:23:02 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[Location Map]]></category>
+		<category><![CDATA[Resource Management]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1203</guid>
+
+					<description><![CDATA[These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work. I did this while working as a Database Geologist.]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg,rgb(194,21,0) 0%,rgb(255,197,0) 100%);padding-top:6vw;padding-right:6vw;padding-bottom:6vw;padding-left:6vw"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg" alt="" class="wp-image-1211" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="887" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg" alt="" class="wp-image-1212" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-300x260.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-768x665.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg" alt="" class="wp-image-1208" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg" alt="" class="wp-image-1207" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg" alt="" class="wp-image-1206" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</figure>
+</div></div>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-6ebff40a8e924e4d2546eb8790dfb999">These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work.</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-ecedf913a5ad16ed8138bcf2f50a5664">I did this while working as a Database Geologist.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//1203-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Location map of mining company in North East Sudan</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//location-map-of-mining-company-in-north-east-sudan/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//location-map-of-mining-company-in-north-east-sudan/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sat, 22 May 2021 07:56:43 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[Location Map]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=979</guid>
+
+					<description><![CDATA[I created this map by integrating Sudan&#8217;s national highway network with my digitized track records of unpaved roads frequently used to access the Hamisana area. Hamisana is a major artisanal and small-scale mining (ASM) market located in the Red Sea State, northeast Sudan. This work highlights key access routes and provides valuable insights for understanding [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-721x1024.jpg" alt="Tracks of the Hamisana " class="wp-image-887" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-768x1091.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-1442x2048.jpg 1442w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track.jpg 1747w" sizes="(max-width: 721px) 100vw, 721px" /></figure>
+
+
+
+<p>I created this map by integrating Sudan&#8217;s national highway network with my digitized track records of unpaved roads frequently used to access the Hamisana area. Hamisana is a major artisanal and small-scale mining (ASM) market located in the Red Sea State, northeast Sudan. This work highlights key access routes and provides valuable insights for understanding transportation dynamics in this significant mining region.</p>
+
+
+
+<p>I used ArcMap 10.2 to digitise the roads, using PBS to import the Bing satellite images.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//location-map-of-mining-company-in-north-east-sudan/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

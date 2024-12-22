@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Spatial Analyis &#8211; Mohammed I. Mukhtar</title>
+	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//category/spatial-analyis/feed/" rel="self" type="application/rss+xml" />
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<description>GIS Portfolio</description>
+	<lastBuildDate>Sun, 22 Dec 2024 16:57:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+
+<image>
+	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr.png</url>
+	<title>Spatial Analyis &#8211; Mohammed I. Mukhtar</title>
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Geospatial data manipulation with Python</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 18 Nov 2024 11:33:28 +0000</pubDate>
+				<category><![CDATA[OSM]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Spatial Analyis]]></category>
+		<category><![CDATA[Spatial Analysis]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1070</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="626" height="1024" data-id="908" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png" alt="" class="wp-image-908" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png 626w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-183x300.png 183w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-768x1257.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-939x1536.png 939w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-1252x2048.png 1252w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis.png 1561w" sizes="(max-width: 626px) 100vw, 626px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1000" height="1000" data-id="906" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png" alt="" class="wp-image-906" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png 1000w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-768x768.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-600x600.png 600w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="760" data-id="902" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png" alt="" class="wp-image-902" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-300x223.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-768x570.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1536x1140.png 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-2048x1521.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="906" height="1024" data-id="900" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png" alt="" class="wp-image-900" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png 906w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-265x300.png 265w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-768x868.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-1358x1536.png 1358w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany.png 1804w" sizes="(max-width: 906px) 100vw, 906px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="796" height="798" data-id="899" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png" alt="" class="wp-image-899" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png 796w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-768x770.png 768w" sizes="(max-width: 796px) 100vw, 796px" /><figcaption class="wp-element-caption">The python code</figcaption></figure>
+</figure>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Gash Risk Map</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//gash-risk-map/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//gash-risk-map/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sun, 19 Feb 2023 16:56:42 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[Spatial Analyis]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1228</guid>
+
+					<description><![CDATA[The steps done to achieve this were as follows:]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-media-text alignfull is-stacked-on-mobile is-vertically-aligned-center"><figure class="wp-block-media-text__media"><img loading="lazy" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-721x1024.jpg" alt="" class="wp-image-918 size-full" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-768x1090.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01.jpg 1165w" sizes="(max-width: 721px) 100vw, 721px" /></figure><div class="wp-block-media-text__content">
+<h3 class="wp-block-heading has-text-align-center has-text-color has-medium-font-size" style="color:#000000">In response to persistent disease outbreaks resulting from the Gash River floods in Kassala State, the state government undertook a risk assessment of the affected area and subsequently implemented a plan to develop an evacuation strategy. As part of this effort, a risk map was generated to identify and quantify vulnerable communities located within three distinct zones along the river: 1 km, 1.5 km, and 2.5 km from the riverbank. This map served as the basis for estimating the population residing within each zone and calculating the corresponding evacuation costs.</h3>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img loading="lazy" decoding="async" width="555" height="110" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/pop.png" alt="" class="wp-image-1230" style="width:691px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/pop.png 555w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/pop-300x59.png 300w" sizes="(max-width: 555px) 100vw, 555px" /></figure>
+</div></div>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-9fe10d84d5a75bdfc50e272eefe43fe3">The steps done to achieve this were as follows:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-2730384b9e89cd3925a37f70ff60617e">Using the join data tool in the attribute table, the Kassala_Settlements shapefile was joined to the table Kassala_population based on a common field.</li>
+
+
+
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-b629e9068ee4d54664c548b42b1961c4">With the Kassala_rivers polyline shapefile, three buffer zones (polygon shapefiles) representing the vulnerable zones were created, with distances of 1km, 1.5km, and 2.5 km.</li>
+
+
+
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-208dd62bf751675fbed78412a64e1c4c">Via selection by location, using the resulting layer of the join in the first step as a target layer, Kassala_rivers as a source layer, and using “are within a distance of the source layer feature” as a spatial selection method, the affected settlement points were identified at distances of 1km, 1.5km, and 2.5km.</li>
+
+
+
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-a150549391f37ffdf4534887bae4bfaa">By multiplying each field [pop_men &#8211; Pop-women &#8211; Child_by- Child_girl] with the appropriate cost, and adding the result, the total cost of each town/village point was calculated. The total cost of the zones was calculated by adding the resulting towns/villages&#8217; total cost that is within the same distance of Gash River acquired by the previous step, for 1km (High-Risk Zone). 1.5km (Medium Risk zone) and 2.5km (Least risk zone). This step was done using Excel Sheets.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img loading="lazy" decoding="async" width="565" height="95" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/cost.png" alt="" class="wp-image-1231" style="width:840px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/cost.png 565w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/cost-300x50.png 300w" sizes="(max-width: 565px) 100vw, 565px" /></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//gash-risk-map/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

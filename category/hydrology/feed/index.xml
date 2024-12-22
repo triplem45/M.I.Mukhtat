@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Hydrology &#8211; Mohammed I. Mukhtar</title>
+	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//category/hydrology/feed/" rel="self" type="application/rss+xml" />
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<description>GIS Portfolio</description>
+	<lastBuildDate>Sun, 22 Dec 2024 16:40:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+
+<image>
+	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr.png</url>
+	<title>Hydrology &#8211; Mohammed I. Mukhtar</title>
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Using ArcGIS Pro</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//first-time-using-arcgis-pro/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//first-time-using-arcgis-pro/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sun, 04 Dec 2022 15:37:19 +0000</pubDate>
+				<category><![CDATA[ArcGIS Pro]]></category>
+		<category><![CDATA[Environmental Monitoring]]></category>
+		<category><![CDATA[Hydrology]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1210</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-group has-background is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-1 wp-block-group-is-layout-flex" style="background:linear-gradient(135deg,rgb(33,95,0) 0%,rgb(228,228,217) 100%)">
+<figure class="wp-block-image size-large is-resized"><img fetchpriority="high" decoding="async" width="791" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-791x1024.jpg" alt="" class="wp-image-895" style="width:347px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-791x1024.jpg 791w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-232x300.jpg 232w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-768x994.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-1187x1536.jpg 1187w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-1583x2048.jpg 1583w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-scaled.jpg 1978w" sizes="(max-width: 791px) 100vw, 791px" /></figure>
+
+
+
+<figure class="wp-block-image size-large is-resized wp-container-content-1"><img decoding="async" width="1024" height="791" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-1024x791.jpg" alt="" class="wp-image-894" style="width:432px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-1024x791.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-300x232.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-768x593.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-1536x1187.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-2048x1583.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//first-time-using-arcgis-pro/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

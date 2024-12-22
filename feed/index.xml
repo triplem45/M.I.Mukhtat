@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mohammed I. Mukhtar</title>
+	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//feed/" rel="self" type="application/rss+xml" />
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<description>GIS Portfolio</description>
+	<lastBuildDate>Sun, 22 Dec 2024 17:55:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+
+<image>
+	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr.png</url>
+	<title>Mohammed I. Mukhtar</title>
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Geospatial data manipulation with Python</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 18 Nov 2024 11:33:28 +0000</pubDate>
+				<category><![CDATA[OSM]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Spatial Analyis]]></category>
+		<category><![CDATA[Spatial Analysis]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1070</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="626" height="1024" data-id="908" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png" alt="" class="wp-image-908" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png 626w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-183x300.png 183w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-768x1257.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-939x1536.png 939w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-1252x2048.png 1252w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis.png 1561w" sizes="(max-width: 626px) 100vw, 626px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1000" height="1000" data-id="906" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png" alt="" class="wp-image-906" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png 1000w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-768x768.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-600x600.png 600w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="760" data-id="902" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png" alt="" class="wp-image-902" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-300x223.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-768x570.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1536x1140.png 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-2048x1521.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="906" height="1024" data-id="900" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png" alt="" class="wp-image-900" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png 906w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-265x300.png 265w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-768x868.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-1358x1536.png 1358w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany.png 1804w" sizes="(max-width: 906px) 100vw, 906px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="796" height="798" data-id="899" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png" alt="" class="wp-image-899" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png 796w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-768x770.png 768w" sizes="(max-width: 796px) 100vw, 796px" /><figcaption class="wp-element-caption">The python code</figcaption></figure>
+</figure>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>N&#8217;Djamena Location Map</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//ndjamena-location-map/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//ndjamena-location-map/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sat, 05 Oct 2024 17:01:52 +0000</pubDate>
+				<category><![CDATA[Location Map]]></category>
+		<category><![CDATA[QGIS]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1233</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:4vw;padding-right:4vw;padding-bottom:4vw;padding-left:4vw"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(90deg,rgb(0,159,255) 0%,rgb(236,47,75) 100%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<div class="wp-block-group is-content-justification-left is-layout-flex wp-container-core-group-is-layout-2 wp-block-group-is-layout-flex">
+<figure class="wp-block-image size-large is-resized wp-container-content-1"><img loading="lazy" decoding="async" width="1024" height="780" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-1024x780.jpg" alt="" class="wp-image-912" style="width:798px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-1024x780.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-300x229.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-768x585.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-1536x1170.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Layout_300dpi-2048x1560.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<div class="wp-block-group alignwide wp-container-content-2 is-content-justification-left"><div class="wp-block-group__inner-container is-layout-constrained wp-container-core-group-is-layout-1 wp-block-group-is-layout-constrained">
+<div style="height:24px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-text-align-left has-black-color has-text-color" style="font-size:18px;font-style:italic;font-weight:600">Data source: Natural Earth, Google Imagery. BaseMap: Stamen Watercolor.</p>
+</div></div>
+</div>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//ndjamena-location-map/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>LULC classification Using GEE and CART</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//lulc-classification-using-gee-and-cart/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//lulc-classification-using-gee-and-cart/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 20 Mar 2023 17:53:16 +0000</pubDate>
+				<category><![CDATA[CART]]></category>
+		<category><![CDATA[Environmental Monitoring]]></category>
+		<category><![CDATA[GEE]]></category>
+		<category><![CDATA[Google Earth Engine]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Land Cover & Land Use]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1237</guid>
+
+					<description><![CDATA[Google Earth Engine (GEE), Code Editor, JavaScript (JS), and GEE data catalog to detect and analyze changes that occurred in Umbadaha between 1985 and 2022 by classifying the Land Cover and Land Use (LCLU) of Umbadaha, which is an Administrative Unit in Khartoum state, Sudan. This was done to differentiate between the LCLU in the [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-vertically-aligned-center has-background" style="background-color:#f1f5c7;grid-template-columns:auto 47%"><div class="wp-block-media-text__content">
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-721x1024.jpg" alt="" class="wp-image-1239" style="width:492px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-768x1090.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output.jpg 1165w" sizes="(max-width: 721px) 100vw, 721px" /></figure>
+</div><figure class="wp-block-media-text__media"><img loading="lazy" decoding="async" width="1024" height="438" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-1024x438.png" alt="" class="wp-image-1240 size-full" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-1024x438.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-300x128.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-768x328.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart.png 1326w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-vertically-aligned-center has-background" style="background-color:#f1f5c7;grid-template-columns:auto 47%"><div class="wp-block-media-text__content">
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="438" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-1024x438.png" alt="" class="wp-image-1242" style="width:492px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-1024x438.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-300x128.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-768x328.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart.png 1326w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div><figure class="wp-block-media-text__media"><img loading="lazy" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-721x1024.jpg" alt="" class="wp-image-922 size-full" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-768x1090.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output.jpg 1165w" sizes="(max-width: 721px) 100vw, 721px" /></figure></div>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-2bdcaffdfc5f533d4a2d5c9bdf0101dd" style="font-size:17px"><a></a>Google Earth Engine (GEE), Code Editor, JavaScript (JS), and GEE data catalog to detect and analyze changes that occurred in Umbadaha between 1985 and 2022 by classifying the Land Cover and Land Use (LCLU) of Umbadaha, which is an Administrative Unit in Khartoum state, Sudan. This was done to differentiate between the LCLU in the area for the years 1985 &amp; 2022, using the Landsat 5 MSS image for the year 1985 and the Landsat 8 OLI image for 2022. This Landsat data was filtered by date to the year and by Cloud percentage of the scene to get a result of an image bounded by the Region of Interest (ROI), which in this cas is the Umbadah Locality polygon.</p>
+
+
+
+<ul class="wp-block-list has-black-color has-text-color has-link-color wp-elements-86833917acc806060877a9e78499f37e">
+<li class="has-black-color has-text-color has-link-color wp-elements-163dbe5a5e870f20572d7f4ffe600e29" style="font-size:17px">Umbadah area in km2: 3481 km2</li>
+</ul>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-1804fd22e966371a30003c99c5d4d8fa" style="font-size:17px">The project aimed to identify six main classes/types of LCLU: Water, Agricultural, urban, Industrial, Rangeland, and BarrenLand. However, due to the arid nature of the area under study, the class for water bodies ‘Water’ wasn’t used in the classification of the two images. Also, the image of the year 1985 didn’t contain any Industrial location in the study area.</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-77df002028a5dc80a9f2333998b6f931" style="font-size:17px">The Classification code is written in JavaScript in the Earth Engine Code Editor. The same code was used for both the 1985 and 2022 images; only the dataset source of the Landsat image was changed. Also, the GCPs for each image are different due to the diversity of the two images.</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-ed8e5e1983d2d530ef54ac897af83a6e" style="font-size:17px">In General, the classification result showed that Barren lands dominate the area and lack any water bodies. In the years between 1985 and 2022, significant growth in urban areas happened, leading to an 850% increase in Residential areas. Although there weren’t any Industrial areas in 1985, this changed drastically in 2022. This can also be said for Agricultural lands. The presence of Grazing lands in the area is restricted to seasonal rivers (wadies).</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-5e7b40981980613e64356a512b45ef6a" style="font-size:20px"><strong>Landsat 8</strong></p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-9850f13623476a675694b873fe3677bd" style="font-size:17px">The Landsat dataset used was for the period between 2022-01-01 to 2022-12-31</p>
+
+
+
+<figure style="font-size:17px" class="wp-block-table"><table class="has-black-color has-text-color has-link-color has-fixed-layout"><tbody><tr><td>Class</td><td>Area in Km2</td></tr><tr><td>Agricultural</td><td>404.53</td></tr><tr><td>Urban</td><td>281.89</td></tr><tr><td>Industrial</td><td>11.14</td></tr><tr><td>Rangeland</td><td>83.88</td></tr><tr><td>BarrenLand</td><td>2687.26</td></tr></tbody></table></figure>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-881326a17912465c6bef23a4937cfd9b" style="font-size:20px"><strong>Landsat 5</strong></p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-f34640fe1892f2609e38d95db1c1c2f0" style="font-size:17px">When we tried to classify the LULC using Landsat 5 images for the period between (1985-01-12 to 1985-12-31), we found that  the Umbadah Area was mainly Barren Land without any significant Agricultural or Grazing lands and no Industrial land.</p>
+
+
+
+<figure style="font-size:17px" class="wp-block-table"><table class="has-black-color has-text-color has-link-color has-fixed-layout"><tbody><tr><td>Class</td><td>Area in Km2</td></tr><tr><td>Agricultural</td><td>2.20</td></tr><tr><td>Urban</td><td>33.34</td></tr><tr><td>Rangeland</td><td>333.11</td></tr><tr><td>Barren Land</td><td>3100.05</td></tr></tbody></table></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//lulc-classification-using-gee-and-cart/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Gash Risk Map</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//gash-risk-map/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//gash-risk-map/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sun, 19 Feb 2023 16:56:42 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[Spatial Analyis]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1228</guid>
+
+					<description><![CDATA[The steps done to achieve this were as follows:]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-media-text alignfull is-stacked-on-mobile is-vertically-aligned-center"><figure class="wp-block-media-text__media"><img loading="lazy" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-721x1024.jpg" alt="" class="wp-image-918 size-full" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-768x1090.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/ASSIGMNET_01.jpg 1165w" sizes="(max-width: 721px) 100vw, 721px" /></figure><div class="wp-block-media-text__content">
+<h3 class="wp-block-heading has-text-align-center has-text-color has-medium-font-size" style="color:#000000">In response to persistent disease outbreaks resulting from the Gash River floods in Kassala State, the state government undertook a risk assessment of the affected area and subsequently implemented a plan to develop an evacuation strategy. As part of this effort, a risk map was generated to identify and quantify vulnerable communities located within three distinct zones along the river: 1 km, 1.5 km, and 2.5 km from the riverbank. This map served as the basis for estimating the population residing within each zone and calculating the corresponding evacuation costs.</h3>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img loading="lazy" decoding="async" width="555" height="110" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/pop.png" alt="" class="wp-image-1230" style="width:691px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/pop.png 555w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/pop-300x59.png 300w" sizes="(max-width: 555px) 100vw, 555px" /></figure>
+</div></div>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-9fe10d84d5a75bdfc50e272eefe43fe3">The steps done to achieve this were as follows:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-2730384b9e89cd3925a37f70ff60617e">Using the join data tool in the attribute table, the Kassala_Settlements shapefile was joined to the table Kassala_population based on a common field.</li>
+
+
+
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-b629e9068ee4d54664c548b42b1961c4">With the Kassala_rivers polyline shapefile, three buffer zones (polygon shapefiles) representing the vulnerable zones were created, with distances of 1km, 1.5km, and 2.5 km.</li>
+
+
+
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-208dd62bf751675fbed78412a64e1c4c">Via selection by location, using the resulting layer of the join in the first step as a target layer, Kassala_rivers as a source layer, and using “are within a distance of the source layer feature” as a spatial selection method, the affected settlement points were identified at distances of 1km, 1.5km, and 2.5km.</li>
+
+
+
+<li class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-a150549391f37ffdf4534887bae4bfaa">By multiplying each field [pop_men &#8211; Pop-women &#8211; Child_by- Child_girl] with the appropriate cost, and adding the result, the total cost of each town/village point was calculated. The total cost of the zones was calculated by adding the resulting towns/villages&#8217; total cost that is within the same distance of Gash River acquired by the previous step, for 1km (High-Risk Zone). 1.5km (Medium Risk zone) and 2.5km (Least risk zone). This step was done using Excel Sheets.</li>
+</ul>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img loading="lazy" decoding="async" width="565" height="95" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/cost.png" alt="" class="wp-image-1231" style="width:840px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/cost.png 565w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/cost-300x50.png 300w" sizes="(max-width: 565px) 100vw, 565px" /></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//gash-risk-map/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Using ArcGIS Pro</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//first-time-using-arcgis-pro/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//first-time-using-arcgis-pro/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sun, 04 Dec 2022 15:37:19 +0000</pubDate>
+				<category><![CDATA[ArcGIS Pro]]></category>
+		<category><![CDATA[Environmental Monitoring]]></category>
+		<category><![CDATA[Hydrology]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1210</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-group has-background is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-3 wp-block-group-is-layout-flex" style="background:linear-gradient(135deg,rgb(33,95,0) 0%,rgb(228,228,217) 100%)">
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="791" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-791x1024.jpg" alt="" class="wp-image-895" style="width:347px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-791x1024.jpg 791w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-232x300.jpg 232w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-768x994.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-1187x1536.jpg 1187w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-1583x2048.jpg 1583w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Wildfire-Impacted-Area-Assignment-scaled.jpg 1978w" sizes="(max-width: 791px) 100vw, 791px" /></figure>
+
+
+
+<figure class="wp-block-image size-large is-resized wp-container-content-3"><img loading="lazy" decoding="async" width="1024" height="791" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-1024x791.jpg" alt="" class="wp-image-894" style="width:432px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-1024x791.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-300x232.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-768x593.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-1536x1187.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Navarro-Landscape-Layout-2048x1583.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//first-time-using-arcgis-pro/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Gadaref Geology Map</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//gadaref-geology-map/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//gadaref-geology-map/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Thu, 17 Nov 2022 16:35:29 +0000</pubDate>
+				<category><![CDATA[QGIS]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1225</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:5vw;padding-right:5vw;padding-bottom:5vw;padding-left:5vw;min-height:66vh;aspect-ratio:unset;"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(90deg,rgb(102,255,0) 0%,rgb(168,0,119) 100%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<div class="wp-block-group wp-container-content-4"><div class="wp-block-group__inner-container is-layout-constrained wp-container-core-group-is-layout-4 wp-block-group-is-layout-constrained">
+<div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-large is-style-default wp-duotone-unset-2"><img loading="lazy" decoding="async" width="724" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Gadarif_Vectorization-724x1024.jpg" alt="" class="wp-image-924" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Gadarif_Vectorization-724x1024.jpg 724w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Gadarif_Vectorization-212x300.jpg 212w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Gadarif_Vectorization-768x1086.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Gadarif_Vectorization-1086x1536.jpg 1086w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Gadarif_Vectorization-1448x2048.jpg 1448w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Gadarif_Vectorization-scaled.jpg 1810w" sizes="(max-width: 724px) 100vw, 724px" /></figure>
+
+
+
+<div style="height:48px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading alignwide has-text-align-center has-white-color has-text-color" style="padding-left:32px;font-size:50px;font-style:normal;font-weight:400;letter-spacing:32px;line-height:1;text-transform:uppercase">Gadaref Geology</h2>
+
+
+
+<details class="wp-block-details has-black-color has-text-color has-link-color has-medium-font-size wp-elements-9f62e399dd7ec31cf9c1a3917edd18f9 is-layout-flow wp-block-details-is-layout-flow" style="font-style:normal;font-weight:700"><summary>Data derived from a digitized version of a scanned map</summary>
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+</details>
+</div></div>
+</div></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//gadaref-geology-map/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Lithology of Bayudha and Dam Et-Tour</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//lithology-of-bayudha-and-dam-et-tour/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//lithology-of-bayudha-and-dam-et-tour/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Wed, 10 Nov 2021 16:09:03 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[QGIS]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1220</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="padding-top:4vw;padding-right:4vw;padding-bottom:4vw;padding-left:4vw;min-height:66vh;aspect-ratio:unset;"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:radial-gradient(rgb(0,65,106) 0%,rgb(121,159,12) 49%,rgb(255,224,0) 99%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<div class="wp-block-group is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-5 wp-block-group-is-layout-flex">
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="724" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-724x1024.jpg" alt="" class="wp-image-893" style="width:554px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-724x1024.jpg 724w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-212x300.jpg 212w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-768x1086.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-1086x1536.jpg 1086w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan.jpg 1241w" sizes="(max-width: 724px) 100vw, 724px" /></figure>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-1024x724.jpg" alt="" class="wp-image-928" style="width:822px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
+
+
+
+<p style="font-size:20px;font-style:normal;font-weight:700">The map on the lest was crated using ArcMap and the one on the right using QGIS</p>
+</div></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//lithology-of-bayudha-and-dam-et-tour/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mapping layout for Monthly reports</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//1203-2/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//1203-2/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Wed, 25 Aug 2021 15:23:02 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[Location Map]]></category>
+		<category><![CDATA[Resource Management]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1203</guid>
+
+					<description><![CDATA[These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work. I did this while working as a Database Geologist.]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg,rgb(194,21,0) 0%,rgb(255,197,0) 100%);padding-top:6vw;padding-right:6vw;padding-bottom:6vw;padding-left:6vw"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg" alt="" class="wp-image-1211" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="887" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg" alt="" class="wp-image-1212" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-300x260.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-768x665.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg" alt="" class="wp-image-1208" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg" alt="" class="wp-image-1207" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg" alt="" class="wp-image-1206" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</figure>
+</div></div>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-6ebff40a8e924e4d2546eb8790dfb999">These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work.</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-ecedf913a5ad16ed8138bcf2f50a5664">I did this while working as a Database Geologist.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//1203-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Flourite delination and Mapping plan</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//flourite-delination-and-mapping-plan/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//flourite-delination-and-mapping-plan/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Thu, 10 Jun 2021 14:58:21 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[DIP]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1195</guid>
+
+					<description><![CDATA[This preliminary mapping plan, developed during the early stages of the ore feasibility study, was generated using digitized outcrop data derived from satellite imagery and existing literature]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-1024x724.jpg" alt="" class="wp-image-888" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p></p>
+
+
+
+<p class="has-medium-font-size">This preliminary mapping plan, developed during the early stages of the ore feasibility study, was generated using digitized outcrop data derived from satellite imagery and existing literature</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//flourite-delination-and-mapping-plan/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Location map of mining company in North East Sudan</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//location-map-of-mining-company-in-north-east-sudan/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//location-map-of-mining-company-in-north-east-sudan/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Sat, 22 May 2021 07:56:43 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[Location Map]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=979</guid>
+
+					<description><![CDATA[I created this map by integrating Sudan&#8217;s national highway network with my digitized track records of unpaved roads frequently used to access the Hamisana area. Hamisana is a major artisanal and small-scale mining (ASM) market located in the Red Sea State, northeast Sudan. This work highlights key access routes and provides valuable insights for understanding [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-721x1024.jpg" alt="Tracks of the Hamisana " class="wp-image-887" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-768x1091.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track-1442x2048.jpg 1442w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Location_and_track.jpg 1747w" sizes="(max-width: 721px) 100vw, 721px" /></figure>
+
+
+
+<p>I created this map by integrating Sudan&#8217;s national highway network with my digitized track records of unpaved roads frequently used to access the Hamisana area. Hamisana is a major artisanal and small-scale mining (ASM) market located in the Red Sea State, northeast Sudan. This work highlights key access routes and provides valuable insights for understanding transportation dynamics in this significant mining region.</p>
+
+
+
+<p>I used ArcMap 10.2 to digitise the roads, using PBS to import the Bing satellite images.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//location-map-of-mining-company-in-north-east-sudan/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Resource Management &#8211; Mohammed I. Mukhtar</title>
+	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//category/resource-management/feed/" rel="self" type="application/rss+xml" />
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<description>GIS Portfolio</description>
+	<lastBuildDate>Sun, 22 Dec 2024 15:31:16 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+
+<image>
+	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr.png</url>
+	<title>Resource Management &#8211; Mohammed I. Mukhtar</title>
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Mapping layout for Monthly reports</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//1203-2/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//1203-2/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Wed, 25 Aug 2021 15:23:02 +0000</pubDate>
+				<category><![CDATA[ArcMap]]></category>
+		<category><![CDATA[Location Map]]></category>
+		<category><![CDATA[Resource Management]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1203</guid>
+
+					<description><![CDATA[These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work. I did this while working as a Database Geologist.]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg,rgb(194,21,0) 0%,rgb(255,197,0) 100%);padding-top:6vw;padding-right:6vw;padding-bottom:6vw;padding-left:6vw"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg" alt="" class="wp-image-1211" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="887" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg" alt="" class="wp-image-1212" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-300x260.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-768x665.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg" alt="" class="wp-image-1208" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg" alt="" class="wp-image-1207" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg" alt="" class="wp-image-1206" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</figure>
+</div></div>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-6ebff40a8e924e4d2546eb8790dfb999">These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work.</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-ecedf913a5ad16ed8138bcf2f50a5664">I did this while working as a Database Geologist.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//1203-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

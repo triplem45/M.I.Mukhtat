@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Google Earth Engine &#8211; Mohammed I. Mukhtar</title>
+	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//category/google-earth-engine/feed/" rel="self" type="application/rss+xml" />
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<description>GIS Portfolio</description>
+	<lastBuildDate>Sun, 22 Dec 2024 17:55:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.7.1</generator>
+
+<image>
+	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr.png</url>
+	<title>Google Earth Engine &#8211; Mohammed I. Mukhtar</title>
+	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>LULC classification Using GEE and CART</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//lulc-classification-using-gee-and-cart/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//lulc-classification-using-gee-and-cart/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 20 Mar 2023 17:53:16 +0000</pubDate>
+				<category><![CDATA[CART]]></category>
+		<category><![CDATA[Environmental Monitoring]]></category>
+		<category><![CDATA[GEE]]></category>
+		<category><![CDATA[Google Earth Engine]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Land Cover & Land Use]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1237</guid>
+
+					<description><![CDATA[Google Earth Engine (GEE), Code Editor, JavaScript (JS), and GEE data catalog to detect and analyze changes that occurred in Umbadaha between 1985 and 2022 by classifying the Land Cover and Land Use (LCLU) of Umbadaha, which is an Administrative Unit in Khartoum state, Sudan. This was done to differentiate between the LCLU in the [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-vertically-aligned-center has-background" style="background-color:#f1f5c7;grid-template-columns:auto 47%"><div class="wp-block-media-text__content">
+<figure class="wp-block-image size-large is-resized"><img fetchpriority="high" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-721x1024.jpg" alt="" class="wp-image-1239" style="width:492px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-768x1090.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L5LULC_output.jpg 1165w" sizes="(max-width: 721px) 100vw, 721px" /></figure>
+</div><figure class="wp-block-media-text__media"><img decoding="async" width="1024" height="438" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-1024x438.png" alt="" class="wp-image-1240 size-full" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-1024x438.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-300x128.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart-768x328.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/1985ee-chart.png 1326w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-vertically-aligned-center has-background" style="background-color:#f1f5c7;grid-template-columns:auto 47%"><div class="wp-block-media-text__content">
+<figure class="wp-block-image size-large is-resized"><img decoding="async" width="1024" height="438" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-1024x438.png" alt="" class="wp-image-1242" style="width:492px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-1024x438.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-300x128.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart-768x328.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/2022ee-chart.png 1326w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div><figure class="wp-block-media-text__media"><img loading="lazy" decoding="async" width="721" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-721x1024.jpg" alt="" class="wp-image-922 size-full" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-721x1024.jpg 721w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-211x300.jpg 211w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-768x1090.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output-1082x1536.jpg 1082w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/L8LULC_output.jpg 1165w" sizes="(max-width: 721px) 100vw, 721px" /></figure></div>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-2bdcaffdfc5f533d4a2d5c9bdf0101dd" style="font-size:17px"><a></a>Google Earth Engine (GEE), Code Editor, JavaScript (JS), and GEE data catalog to detect and analyze changes that occurred in Umbadaha between 1985 and 2022 by classifying the Land Cover and Land Use (LCLU) of Umbadaha, which is an Administrative Unit in Khartoum state, Sudan. This was done to differentiate between the LCLU in the area for the years 1985 &amp; 2022, using the Landsat 5 MSS image for the year 1985 and the Landsat 8 OLI image for 2022. This Landsat data was filtered by date to the year and by Cloud percentage of the scene to get a result of an image bounded by the Region of Interest (ROI), which in this cas is the Umbadah Locality polygon.</p>
+
+
+
+<ul class="wp-block-list has-black-color has-text-color has-link-color wp-elements-86833917acc806060877a9e78499f37e">
+<li class="has-black-color has-text-color has-link-color wp-elements-163dbe5a5e870f20572d7f4ffe600e29" style="font-size:17px">Umbadah area in km2: 3481 km2</li>
+</ul>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-1804fd22e966371a30003c99c5d4d8fa" style="font-size:17px">The project aimed to identify six main classes/types of LCLU: Water, Agricultural, urban, Industrial, Rangeland, and BarrenLand. However, due to the arid nature of the area under study, the class for water bodies ‘Water’ wasn’t used in the classification of the two images. Also, the image of the year 1985 didn’t contain any Industrial location in the study area.</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-77df002028a5dc80a9f2333998b6f931" style="font-size:17px">The Classification code is written in JavaScript in the Earth Engine Code Editor. The same code was used for both the 1985 and 2022 images; only the dataset source of the Landsat image was changed. Also, the GCPs for each image are different due to the diversity of the two images.</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-ed8e5e1983d2d530ef54ac897af83a6e" style="font-size:17px">In General, the classification result showed that Barren lands dominate the area and lack any water bodies. In the years between 1985 and 2022, significant growth in urban areas happened, leading to an 850% increase in Residential areas. Although there weren’t any Industrial areas in 1985, this changed drastically in 2022. This can also be said for Agricultural lands. The presence of Grazing lands in the area is restricted to seasonal rivers (wadies).</p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-5e7b40981980613e64356a512b45ef6a" style="font-size:20px"><strong>Landsat 8</strong></p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-9850f13623476a675694b873fe3677bd" style="font-size:17px">The Landsat dataset used was for the period between 2022-01-01 to 2022-12-31</p>
+
+
+
+<figure style="font-size:17px" class="wp-block-table"><table class="has-black-color has-text-color has-link-color has-fixed-layout"><tbody><tr><td>Class</td><td>Area in Km2</td></tr><tr><td>Agricultural</td><td>404.53</td></tr><tr><td>Urban</td><td>281.89</td></tr><tr><td>Industrial</td><td>11.14</td></tr><tr><td>Rangeland</td><td>83.88</td></tr><tr><td>BarrenLand</td><td>2687.26</td></tr></tbody></table></figure>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-881326a17912465c6bef23a4937cfd9b" style="font-size:20px"><strong>Landsat 5</strong></p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-f34640fe1892f2609e38d95db1c1c2f0" style="font-size:17px">When we tried to classify the LULC using Landsat 5 images for the period between (1985-01-12 to 1985-12-31), we found that  the Umbadah Area was mainly Barren Land without any significant Agricultural or Grazing lands and no Industrial land.</p>
+
+
+
+<figure style="font-size:17px" class="wp-block-table"><table class="has-black-color has-text-color has-link-color has-fixed-layout"><tbody><tr><td>Class</td><td>Area in Km2</td></tr><tr><td>Agricultural</td><td>2.20</td></tr><tr><td>Urban</td><td>33.34</td></tr><tr><td>Rangeland</td><td>333.11</td></tr><tr><td>Barren Land</td><td>3100.05</td></tr></tbody></table></figure>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//lulc-classification-using-gee-and-cart/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
