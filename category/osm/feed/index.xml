@@ -12,7 +12,7 @@
 	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//category/osm/feed/" rel="self" type="application/rss+xml" />
 	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
 	<description>GIS Portfolio</description>
-	<lastBuildDate>Sun, 22 Dec 2024 16:41:09 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 23 Dec 2024 17:15:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,127 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Creating a static Map using python</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//creating-a-static-map-using-python/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//creating-a-static-map-using-python/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 23 Dec 2024 17:14:26 +0000</pubDate>
+				<category><![CDATA[OSM]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1405</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:48px;padding-right:5vw;padding-bottom:48px;padding-left:5vw"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(180deg,rgb(6,147,227) 31%,rgb(155,81,224) 31%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p class="has-text-align-center has-large-font-size">In this map I used data from Natueral Earth to create a simple map depicting the flood risk zones of Chari river in Chad</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># setting the directory and the environment of the work 
+
+import pathlib 
+NOTEBOOK_PATH = pathlib.Path().resolve()
+DATA_DIRECTORY = NOTEBOOK_PATH / &quot;data&quot;
+OUTPUT_DIRECTORY = NOTEBOOK_PATH / &quot;docs&quot;
+
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import contextily </pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">#The data file is stored as a geojson file locally 
+#read the data as pandas geodata frames 
+
+Chad_rivers = gpd.read_file(
+    DATA_DIRECTORY /  &quot;Chad_Rivers.geojson&quot; 
+).to_crs(&quot;EPSG:3857&quot;)
+
+
+Chad_Roads = gpd.read_file(
+    DATA_DIRECTORY / &quot;Chad_Roads.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)
+
+Flood = gpd.read_file(
+    DATA_DIRECTORY / &quot;ChariFlood.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)
+
+ChariRiver = gpd.read_file(
+    DATA_DIRECTORY / &quot;ChariRiver.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)
+
+Lake_Chad_Polygon = gpd.read_file(
+    DATA_DIRECTORY / &quot;Lake_Chad_Polygon.geojson&quot; 
+).to_crs(&quot;EPSG:3857&quot;)
+
+
+PopChad = gpd.read_file(
+    DATA_DIRECTORY / &quot;PopChad.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Plorring the data (making a static map using matplotlib)
+
+
+fig, ax = plt.subplots(figsize=(10, 10))
+
+ChariRiver.plot(
+    ax=ax,
+    color=&quot;blue&quot;,
+    linewidth=0.5
+)
+
+Flood.plot(
+   column=&quot;level&quot;,
+    scheme=&quot;quantiles&quot;,
+    k=3,
+    cmap=&quot;Spectral&quot;,
+    legend=True,
+    legend_kwds={
+        &quot;title&quot;: &quot;Flood Risk Levels&quot;,
+        &quot;labels&quot;: [&quot;High Risk&quot;, &quot;Medium Risk&quot;, &quot;Low Risk&quot;],
+    },
+    ax=ax
+)
+
+PopChad.plot(
+    ax=ax,
+    color=&quot;black&quot;,
+    markersize=10
+)
+
+Lake_Chad_Polygon.plot(
+    ax=ax,
+    color=&quot;lightblue&quot;
+)
+
+
+ax.set_title(&quot;Flood Risk Analysis in N'Djamena&quot;)
+
+contextily.add_basemap(
+    ax, source= contextily.providers.Esri.NatGeoWorldMap,
+    attribution = (
+    &quot;Data Source: (c) Natural Earth, &quot;
+    &quot;Map (c) Esri&quot;
+    )
+)
+
+plt.savefig(OUTPUT_DIRECTORY / &quot;NDjemena Flood Risk Analysis.png&quot;, dpi=300, bbox_inches=&quot;tight&quot;)</pre></div>
+
+
+
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="626" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png" alt="" class="wp-image-908" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png 626w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-183x300.png 183w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-768x1257.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-939x1536.png 939w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-1252x2048.png 1252w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis.png 1561w" sizes="(max-width: 626px) 100vw, 626px" /></figure>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//creating-a-static-map-using-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Geospatial data manipulation with Python</title>
 		<link>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/</link>
 					<comments>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/#respond</comments>
@@ -43,28 +164,16 @@
 					<description><![CDATA[]]></description>
 										<content:encoded><![CDATA[
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="626" height="1024" data-id="908" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png" alt="" class="wp-image-908" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png 626w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-183x300.png 183w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-768x1257.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-939x1536.png 939w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-1252x2048.png 1252w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis.png 1561w" sizes="(max-width: 626px) 100vw, 626px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img decoding="async" width="1000" height="1000" data-id="906" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png" alt="" class="wp-image-906" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png 1000w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-768x768.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-600x600.png 600w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
-
-
-
 <figure class="wp-block-image size-large"><img decoding="async" width="1024" height="760" data-id="902" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png" alt="" class="wp-image-902" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-300x223.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-768x570.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1536x1140.png 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-2048x1521.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="906" height="1024" data-id="900" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png" alt="" class="wp-image-900" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png 906w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-265x300.png 265w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-768x868.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-1358x1536.png 1358w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany.png 1804w" sizes="(max-width: 906px) 100vw, 906px" /></figure>
+<figure class="wp-block-image size-large"><img decoding="async" width="906" height="1024" data-id="900" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png" alt="" class="wp-image-900" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-906x1024.png 906w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-265x300.png 265w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-768x868.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany-1358x1536.png 1358w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Stuttgart-Mitte-Stuttgart-Germany.png 1804w" sizes="(max-width: 906px) 100vw, 906px" /></figure>
 
 
 
 <figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="796" height="798" data-id="899" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png" alt="" class="wp-image-899" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png 796w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-768x770.png 768w" sizes="(max-width: 796px) 100vw, 796px" /><figcaption class="wp-element-caption">The python code</figcaption></figure>
 </figure>
-
-
-
-<p></p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/feed/</wfw:commentRss>

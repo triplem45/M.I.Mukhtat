@@ -12,7 +12,7 @@
 	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//feed/" rel="self" type="application/rss+xml" />
 	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
 	<description>GIS Portfolio</description>
-	<lastBuildDate>Mon, 23 Dec 2024 07:15:30 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 23 Dec 2024 17:15:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,586 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Creating a static Map using python</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//creating-a-static-map-using-python/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//creating-a-static-map-using-python/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 23 Dec 2024 17:14:26 +0000</pubDate>
+				<category><![CDATA[OSM]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1405</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:48px;padding-right:5vw;padding-bottom:48px;padding-left:5vw"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(180deg,rgb(6,147,227) 31%,rgb(155,81,224) 31%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p class="has-text-align-center has-large-font-size">In this map I used data from Natueral Earth to create a simple map depicting the flood risk zones of Chari river in Chad</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># setting the directory and the environment of the work 
+
+import pathlib 
+NOTEBOOK_PATH = pathlib.Path().resolve()
+DATA_DIRECTORY = NOTEBOOK_PATH / &quot;data&quot;
+OUTPUT_DIRECTORY = NOTEBOOK_PATH / &quot;docs&quot;
+
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import contextily </pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">#The data file is stored as a geojson file locally 
+#read the data as pandas geodata frames 
+
+Chad_rivers = gpd.read_file(
+    DATA_DIRECTORY /  &quot;Chad_Rivers.geojson&quot; 
+).to_crs(&quot;EPSG:3857&quot;)
+
+
+Chad_Roads = gpd.read_file(
+    DATA_DIRECTORY / &quot;Chad_Roads.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)
+
+Flood = gpd.read_file(
+    DATA_DIRECTORY / &quot;ChariFlood.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)
+
+ChariRiver = gpd.read_file(
+    DATA_DIRECTORY / &quot;ChariRiver.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)
+
+Lake_Chad_Polygon = gpd.read_file(
+    DATA_DIRECTORY / &quot;Lake_Chad_Polygon.geojson&quot; 
+).to_crs(&quot;EPSG:3857&quot;)
+
+
+PopChad = gpd.read_file(
+    DATA_DIRECTORY / &quot;PopChad.geojson&quot;
+).to_crs(&quot;EPSG:3857&quot;)</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Plorring the data (making a static map using matplotlib)
+
+
+fig, ax = plt.subplots(figsize=(10, 10))
+
+ChariRiver.plot(
+    ax=ax,
+    color=&quot;blue&quot;,
+    linewidth=0.5
+)
+
+Flood.plot(
+   column=&quot;level&quot;,
+    scheme=&quot;quantiles&quot;,
+    k=3,
+    cmap=&quot;Spectral&quot;,
+    legend=True,
+    legend_kwds={
+        &quot;title&quot;: &quot;Flood Risk Levels&quot;,
+        &quot;labels&quot;: [&quot;High Risk&quot;, &quot;Medium Risk&quot;, &quot;Low Risk&quot;],
+    },
+    ax=ax
+)
+
+PopChad.plot(
+    ax=ax,
+    color=&quot;black&quot;,
+    markersize=10
+)
+
+Lake_Chad_Polygon.plot(
+    ax=ax,
+    color=&quot;lightblue&quot;
+)
+
+
+ax.set_title(&quot;Flood Risk Analysis in N'Djamena&quot;)
+
+contextily.add_basemap(
+    ax, source= contextily.providers.Esri.NatGeoWorldMap,
+    attribution = (
+    &quot;Data Source: (c) Natural Earth, &quot;
+    &quot;Map (c) Esri&quot;
+    )
+)
+
+plt.savefig(OUTPUT_DIRECTORY / &quot;NDjemena Flood Risk Analysis.png&quot;, dpi=300, bbox_inches=&quot;tight&quot;)</pre></div>
+
+
+
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="626" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png" alt="" class="wp-image-908" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png 626w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-183x300.png 183w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-768x1257.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-939x1536.png 939w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-1252x2048.png 1252w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis.png 1561w" sizes="(max-width: 626px) 100vw, 626px" /></figure>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//creating-a-static-map-using-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Calculate and visualise the dominance areas of shopping centres &#8211; Python</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//calculate-and-visualise-the-dominance-areas-of-shopping-centres-python/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//calculate-and-visualise-the-dominance-areas-of-shopping-centres-python/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 23 Dec 2024 17:04:13 +0000</pubDate>
+				<category><![CDATA[Data Analysis]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Spatial Analyis]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1402</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:5vw;padding-right:5vw;padding-bottom:5vw;padding-left:5vw;min-height:66vh;aspect-ratio:unset;"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(90deg,rgb(2,3,129) 47%,rgb(40,116,252) 47%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p class="has-text-align-center has-white-color has-text-color has-link-color has-medium-font-size wp-elements-fc6c23aae8a55540b5ad80202108e6e6">The aim is to delineate the dominance area of each shopping centre. </p>
+
+
+
+<p>For this exercise, we define the ‘dominance area’ of a shopping centre as the area from which it can be reached faster than other shopping centres, using public transport travel times.</p>
+
+
+
+<p>This task comprises of three major subtasks</p>
+
+
+
+<ul class="wp-block-list">
+<li class="has-white-color has-text-color has-link-color wp-elements-8fd6e85f0501ee6384ed47e221543d31">Loading the YKR grid and the individual travel time data sets and combining them into one geo data frame. </li>
+
+
+
+<li class="has-white-color has-text-color has-link-color wp-elements-f6f76b3c97c9e93aee77a4c3920a3dfd">Finding the closest shopping centre to each grid cell. Using the minimum travel time to any of the shopping centres, </li>
+
+
+
+<li class="has-white-color has-text-color has-link-color wp-elements-f7b057642d66274ab4b66d42f3dbc766">Visualising the dominance areas and travel times, using 2⨉1 subplots to plot the most dominant (closest) shopping centre for each grid cell, and the travel time to the closest shopping centre for each grid cell.</li>
+</ul>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">import pandas as pd
+import geopandas as gpd
+import mapclassify
+import matplotlib.pyplot as plt
+
+import pathlib 
+NOTEBOOK_PATH = pathlib.Path().resolve()
+DATA_DIRECTORY = NOTEBOOK_PATH / &quot;data&quot;</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">#Import the YKR grid and Set the &quot;YKR_ID&quot; column as index
+grid = gpd.read_file(DATA_DIRECTORY / &quot;YKR_grid_EPSG3067.gpkg&quot;)
+grid = grid.set_index(&quot;YKR_ID&quot;)</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Import the shpping centres data 
+Itis = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5944003_Itis.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )
+
+
+Myyrmanni = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5902043_Myyrmanni.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )
+
+Jumbo = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5878070_Jumbo.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )
+
+Dixii = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5878087_Dixi.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )
+
+Forum = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5975373_Forum.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )
+
+Iso_Omena = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5978593_Iso_Omena.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )
+
+Ruoholahti = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5980260_Ruoholahti.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Join data and add suffix name to doupled column names
+all_data = Itis.add_suffix(&quot;_Itis&quot;).join(
+    Myyrmanni.add_suffix(&quot;_Myyrmanni&quot;)
+).join(Jumbo.add_suffix(&quot;_Jumbo&quot;)
+      ).join(
+    Dixii.add_suffix(&quot;_Dixii&quot;)
+).join(
+    Forum.add_suffix(&quot;_Forum&quot;)
+).join(
+    Iso_Omena.add_suffix(&quot;_Iso_Omena&quot;)
+).join(
+    Ruoholahti.add_suffix(&quot;_Ruoholahti&quot;)
+)
+grid = grid.join(all_data)
+</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">grid[&quot;min_tr_t&quot;] = grid[[&quot;pt_r_t_Itis&quot;, &quot;pt_r_t_Myyrmanni&quot;, &quot;pt_r_t_Jumbo&quot;, &quot;pt_r_t_Dixii&quot;, &quot;pt_r_t_Forum&quot;, &quot;pt_r_t_Iso_Omena&quot;, &quot;pt_r_t_Ruoholahti&quot;]].min(axis=1)
+grid[&quot;closest_ShoppingCentre&quot;] = grid[[&quot;pt_r_t_Itis&quot;, &quot;pt_r_t_Myyrmanni&quot;, &quot;pt_r_t_Jumbo&quot;, &quot;pt_r_t_Dixii&quot;, &quot;pt_r_t_Forum&quot;, &quot;pt_r_t_Iso_Omena&quot;, &quot;pt_r_t_Ruoholahti&quot;]].idxmin(axis=1).astype(str)
+
+grid[&quot;closest_ShoppingCentre&quot;] = grid[&quot;closest_ShoppingCentre&quot;].apply(
+    lambda value : value[7:]
+)</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 15), facecolor=&quot;lightgrey&quot;)
+
+
+ax1.set_title(&quot;Areas of dominance of shopping centres&quot;)
+ax2.set_title(&quot;Travel time to the closest shopping centre&quot;)
+
+grid.plot(
+    column=&quot;closest_ShoppingCentre&quot;,
+    ax=ax1,
+    cmap=&quot;RdYlBu&quot;,
+    linewidth=0,
+    legend=True
+)
+
+grid.plot(
+    column=&quot;min_tr_t&quot;,
+    ax=ax2,
+    cmap=&quot;RdYlBu&quot;,
+    linewidth=0
+)
+
+plt.savefig(DATA_DIRECTORY / &quot;dominance_areas.png&quot;)</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="1000" height="500" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/dominance_areas_example_1000x500px.png" alt="" class="wp-image-1403" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/dominance_areas_example_1000x500px.png 1000w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/dominance_areas_example_1000x500px-300x150.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/dominance_areas_example_1000x500px-768x384.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//calculate-and-visualise-the-dominance-areas-of-shopping-centres-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Joining accessibility datasets into a grid and visualising the data on a map using Python</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//joining-accessibility-datasets-into-a-grid-and-visualising-the-data-on-a-map-using-python/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//joining-accessibility-datasets-into-a-grid-and-visualising-the-data-on-a-map-using-python/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 09 Dec 2024 16:51:03 +0000</pubDate>
+				<category><![CDATA[Data Analysis]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[Spatial Analyis]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1392</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:5vw;padding-right:5vw;padding-bottom:5vw;padding-left:5vw"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(180deg,rgb(21,87,153) 0%,rgb(21,153,87) 100%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p>This exercise, part of the Master&#8217;s in GIS curriculum at the University of Helsinki, combines non-spatial data (travel times) with spatial data (grid cells representing locations) to visualize travel times to two shopping centers within the Helsinki metropolitan area. The goal is to integrate these datasets and generate a map showing travel times from every location in the grid to each shopping center.</p>
+
+
+
+<p>In particular, this task comprises of three major steps:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="has-white-color has-text-color has-link-color wp-elements-cf90ddb50ad04afafed638711d23d96c">Reading the grid cell data set</li>
+
+
+
+<li class="has-white-color has-text-color has-link-color wp-elements-c2339dd58cb79bc00759ffc577f06461">Reading travel time data set,</li>
+
+
+
+<li class="has-white-color has-text-color has-link-color wp-elements-d4a1a17a1967c3482bdb1281c2d43180">Classifying the travel times for both travel modes (public transport and private car) into five-minute intervals</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading has-black-color has-text-color has-link-color wp-elements-193b485d305cba77607ddc07f7a095ae">1. <strong>Reading the grid cell data set</strong></h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">import pathlib 
+NOTEBOOK_PATH = pathlib.Path().resolve()
+DATA_DIRECTORY = NOTEBOOK_PATH / &quot;data&quot;
+
+import pandas as pd
+import geopandas as gpd</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">grid = gpd.read_file(DATA_DIRECTORY / &quot;YKR_grid_EPSG3067.gpkg&quot;)
+grid = grid.set_index(&quot;YKR_ID&quot;)
+grid.head()</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="921" height="220" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-13.png" alt="" class="wp-image-1396" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-13.png 921w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-13-300x72.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-13-768x183.png 768w" sizes="(max-width: 921px) 100vw, 921px" /></figure>
+
+
+
+<h2 class="wp-block-heading has-black-color has-text-color has-link-color wp-elements-1dd0e94a79fb67a636eb57c50fc6f3bc">2. Reading the travel time data sets and join them to the grid cells </h2>
+
+
+
+<p>Inside the&nbsp;data&nbsp;directory, a set of semicolon-separated text files with travel times to each of a set of shopping centres in the Helsinki region</p>
+
+
+
+<p>The individual files have file names following the schema&nbsp;travel_times_to_[XXXXX]_[Shopping_Centre], where&nbsp;[Shopping_Centre]&nbsp;is the name of one of the seven shopping centres included in the data set, and&nbsp;[XXXXX], coincidently, referring to the YKR grid cell in which the shopping centre is located</p>
+
+
+
+<p>The data sets contain computed travel times between different places in the metropolitan area. In order to produce such a&nbsp;<em>travel time matrix</em>, all connections from all origins to all destinations are calculated, and then recorded in a table.</p>
+
+
+
+<p><strong>Columns</strong></p>
+
+
+
+<p>The data sets we use have many&nbsp;<strong>columns</strong>, but only a few are interesting for this task:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="has-white-color has-text-color has-link-color wp-elements-2b26e1708931dc0787d918eaa8c0793f">from_id: the YKR_ID of the <em>origin</em> grid cell</li>
+
+
+
+<li class="has-white-color has-text-color has-link-color wp-elements-0a8925baf206f347d5b2fce4c6140540">to_id: refers to the YKR_ID of the <em>destination</em> grid cell (here: the one containing the shopping centre).</li>
+
+
+
+<li class="has-white-color has-text-color has-link-color wp-elements-5c31f15c6fd6e253129af7cd251e8091">pt_r_t: how long does it take to travel from from_id to to_id, in minutes, using public transport</li>
+
+
+
+<li class="has-white-color has-text-color has-link-color wp-elements-e57d582fba15a78abd9bc37341af8454">car_r_t: how long does it take to drive a car from from_id to to_id, in minutes</li>
+</ul>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-809841e9a6bc832d5d295f2558c9168a"><strong>The next code is to read the data sets for the shopping centres ‘Itis’ and ‘Myyrmanni’, discard irrelevant columns, rename the pt_r_t and car_r_t columns to include a reference to the shopping centre (e.g., into pt_r_t_Itis), and join the renamed columns to the grid data frame. Don’t forget to replace no-data values (-1) with None</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">Itis = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5944003_Itis.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;, &quot;car_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    ).rename(columns={&quot;pt_r_t&quot;:&quot;pt_r_t_Itis&quot;, &quot;car_r_t&quot;:&quot;car_r_t_Itis&quot;, &quot;to_id&quot;:&quot;to_id_Itis&quot;})
+
+
+Myyrmanni = pd.read_csv(
+    DATA_DIRECTORY / &quot;travel_times_to_5902043_Myyrmanni.txt&quot;, 
+    sep=&quot;;&quot;,
+    na_values=-1,
+    usecols=[&quot;from_id&quot;, &quot;to_id&quot;, &quot;pt_r_t&quot;, &quot;car_r_t&quot;],
+    index_col=&quot;from_id&quot;
+    )</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">grid = grid.join(Itis).join(Myyrmanni.add_suffix(&quot;_Myyrmanni&quot;))
+grid.head()</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="928" height="300" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-14.png" alt="" class="wp-image-1397" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-14.png 928w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-14-300x97.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-14-768x248.png 768w" sizes="(max-width: 928px) 100vw, 928px" /></figure>
+
+
+
+<h2 class="wp-block-heading has-black-color has-text-color has-link-color wp-elements-5341f3df6d13c47a2375791619d9cefe">3. Classifying the travel times into five-minute intervals</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">import mapclassify
+&quot;&quot;&quot;
+Create a mapclassify.UserDefined classifier, using these class breaks:
+                                        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60
+&quot;&quot;&quot;
+bins =[5, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0, 60.0]
+# for Itis
+classifier1 = mapclassify.UserDefined(
+    y=grid[&quot;pt_r_t_Itis&quot;], 
+    bins=bins
+)
+
+# for Myyrmanni
+classifier2 = mapclassify.UserDefined(
+    y=grid[&quot;car_r_t_Myyrmanni&quot;], 
+    bins=bins
+)
+
+classifier3 = mapclassify.UserDefined(
+    y=grid[&quot;car_r_t_Itis&quot;], 
+    bins=bins
+)
+
+classifier4 = mapclassify.UserDefined(
+    y=grid[&quot;pt_r_t_Myyrmanni&quot;], 
+    bins=bins
+)
+
+&quot;&quot;&quot;
+Apply the classifier to pt_r_t_[ShoppingCentre] and car_r_t_[ShoppingCentre] columns, 
+and store the results to pt_r_t_cl_[ShoppingCentre] and car_r_t_cl_[ShoppingCentre] columns, respectively
+&quot;&quot;&quot;
+
+#yb: Short for “yielded bins,” this attribute contains the class index for each data value
+grid[&quot;pt_r_t_cl_Itis&quot;] =  classifier1.yb
+
+grid[&quot;car_r_t_cl_Myyrmanni&quot;] = classifier2.yb
+
+grid[&quot;car_r_t_cl_Itis&quot;] =  classifier3.yb
+
+grid[&quot;pt_r_t_cl_Myyrmanni&quot;] =  classifier4.yb</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Check the output for Itis
+print(&quot;travel times by public transport:&quot;)
+grid[['pt_r_t_Itis', 'pt_r_t_cl_Itis']].head()</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="921" height="231" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-15.png" alt="" class="wp-image-1398" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-15.png 921w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-15-300x75.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-15-768x193.png 768w" sizes="(max-width: 921px) 100vw, 921px" /></figure>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Check the output for Myyrmanni
+print(&quot;Travel times by car:&quot;)
+grid[[&quot;car_r_t_Myyrmanni&quot;, &quot;car_r_t_cl_Myyrmanni&quot;]].head()</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="925" height="240" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-16.png" alt="" class="wp-image-1399" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-16.png 925w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-16-300x78.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-16-768x199.png 768w" sizes="(max-width: 925px) 100vw, 925px" /></figure>
+
+
+
+<h2 class="wp-block-heading has-black-color has-text-color has-link-color wp-elements-44d9283c68059f61d417bf5b76e9d64e">4. Ploting the classified travel times</h2>
+
+
+
+<p>Creating a 2⨉2 plot, to plot the <em>classified</em> travel times by public transport (left) and by car (right), to Itis (top) and Myyrmanni (bottom)</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">import matplotlib.pyplot as plt
+
+# Creating subplots using matplotlib.pyplot.subplots(), 
+#with 2 rows and 2 columns. Increase the figure size to 10⨉10&quot;
+fig, axs = plt.subplots(nrows=2, ncols=2, figsize=(10, 10))
+
+#title
+fig.suptitle('Travel times by public transport (PT) and car to Itis and Myyrmanni')
+
+# Defining variables to more easily refer to individual axes
+ax11 = axs[0][0]
+ax12 = axs[0][1]
+ax21 = axs[1][0]
+ax22 = axs[1][1]
+
+#Adding appropriate titles for the subplots
+ax11.set_title(&quot;Itis - Travel time by PT&quot;)
+ax12.set_title(&quot;Itis - Travel time by Car&quot;)
+ax21.set_title(&quot;Myyrmanni - Travel time by PT&quot;)   
+ax22.set_title(&quot;Myyrmanni - Travel time by Car&quot;)
+
+# Set plot line width
+line_width = 1.5
+
+# Plot data
+grid.plot(
+    column=&quot;pt_r_t_cl_Itis&quot;,
+    ax=ax11,
+    cmap=&quot;RdYlBu&quot;,
+    linewidth=0
+)
+
+grid.plot(
+    column=&quot;car_r_t_cl_Itis&quot;,
+    ax=ax12,
+    cmap=&quot;RdYlBu&quot;,
+    linewidth=0
+)
+
+grid.plot(
+    column=&quot;pt_r_t_cl_Myyrmanni&quot;,
+    ax=ax21,
+    cmap=&quot;RdYlBu&quot;,
+    linewidth=0
+)
+
+grid.plot(
+    column=&quot;car_r_t_cl_Myyrmanni&quot;,
+    ax=ax22,
+    cmap=&quot;RdYlBu&quot;,
+    linewidth=0
+)
+#Saving the figure to a file called shopping_centre_accessibility.png in the DATA_DIRECTORY
+plt.savefig(DATA_DIRECTORY / &quot;shopping_centre_accessibility.png&quot;)</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="720" height="720" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/travel_times_example_720x720px.png" alt="" class="wp-image-1400" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/travel_times_example_720x720px.png 720w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/travel_times_example_720x720px-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/travel_times_example_720x720px-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/travel_times_example_720x720px-600x600.png 600w" sizes="(max-width: 720px) 100vw, 720px" /></figure>
+</div></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//joining-accessibility-datasets-into-a-grid-and-visualising-the-data-on-a-map-using-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Geospatial data manipulation with Python</title>
 		<link>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/</link>
 					<comments>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/#respond</comments>
@@ -43,15 +623,7 @@
 					<description><![CDATA[]]></description>
 										<content:encoded><![CDATA[
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="626" height="1024" data-id="908" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png" alt="" class="wp-image-908" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-626x1024.png 626w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-183x300.png 183w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-768x1257.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-939x1536.png 939w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis-1252x2048.png 1252w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/NDjemena-Flood-Risk-Analysis.png 1561w" sizes="(max-width: 626px) 100vw, 626px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img decoding="async" width="1000" height="1000" data-id="906" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png" alt="" class="wp-image-906" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility.png 1000w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-768x768.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/shopping_centre_accessibility-600x600.png 600w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="760" data-id="902" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png" alt="" class="wp-image-902" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-300x223.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-768x570.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1536x1140.png 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-2048x1521.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="760" data-id="902" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png" alt="" class="wp-image-902" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1024x760.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-300x223.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-768x570.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-1536x1140.png 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/access_grid-2048x1521.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -61,10 +633,6 @@
 
 <figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="796" height="798" data-id="899" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png" alt="" class="wp-image-899" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code.png 796w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-300x300.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-150x150.png 150w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/code-768x770.png 768w" sizes="(max-width: 796px) 100vw, 796px" /><figcaption class="wp-element-caption">The python code</figcaption></figure>
 </figure>
-
-
-
-<p></p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/feed/</wfw:commentRss>
@@ -763,130 +1331,6 @@ plt.show()</pre></div>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//gadaref-geology-map/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Lithology of Bayudha and Dam Et-Tour</title>
-		<link>https://triplem45.github.io/M.I.Mukhtat//lithology-of-bayudha-and-dam-et-tour/</link>
-					<comments>https://triplem45.github.io/M.I.Mukhtat//lithology-of-bayudha-and-dam-et-tour/#respond</comments>
-		
-		<dc:creator><![CDATA[root]]></dc:creator>
-		<pubDate>Wed, 10 Nov 2021 16:09:03 +0000</pubDate>
-				<category><![CDATA[ArcMap]]></category>
-		<category><![CDATA[QGIS]]></category>
-		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1220</guid>
-
-					<description><![CDATA[]]></description>
-										<content:encoded><![CDATA[
-<div class="wp-block-cover alignfull" style="padding-top:4vw;padding-right:4vw;padding-bottom:4vw;padding-left:4vw;min-height:66vh;aspect-ratio:unset;"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:radial-gradient(rgb(0,65,106) 0%,rgb(121,159,12) 49%,rgb(255,224,0) 99%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
-<div class="wp-block-group is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-5 wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="724" height="1024" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-724x1024.jpg" alt="" class="wp-image-893" style="width:554px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-724x1024.jpg 724w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-212x300.jpg 212w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-768x1086.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan-1086x1536.jpg 1086w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Geological_MapSudan.jpg 1241w" sizes="(max-width: 724px) 100vw, 724px" /></figure>
-
-
-
-<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-1024x724.jpg" alt="" class="wp-image-928" style="width:822px;height:auto" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Bayuda-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-</div>
-
-
-
-<p style="font-size:20px;font-style:normal;font-weight:700">The map on the lest was crated using ArcMap and the one on the right using QGIS</p>
-</div></div>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//lithology-of-bayudha-and-dam-et-tour/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Mapping layout for Monthly reports</title>
-		<link>https://triplem45.github.io/M.I.Mukhtat//1203-2/</link>
-					<comments>https://triplem45.github.io/M.I.Mukhtat//1203-2/#respond</comments>
-		
-		<dc:creator><![CDATA[root]]></dc:creator>
-		<pubDate>Wed, 25 Aug 2021 15:23:02 +0000</pubDate>
-				<category><![CDATA[ArcMap]]></category>
-		<category><![CDATA[Location Map]]></category>
-		<category><![CDATA[Resource Management]]></category>
-		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1203</guid>
-
-					<description><![CDATA[These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work. I did this while working as a Database Geologist.]]></description>
-										<content:encoded><![CDATA[
-<div class="wp-block-group alignfull has-background" style="background:linear-gradient(135deg,rgb(194,21,0) 0%,rgb(255,197,0) 100%);padding-top:6vw;padding-right:6vw;padding-bottom:6vw;padding-left:6vw"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-3 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg" alt="" class="wp-image-1211" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-10.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="887" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg" alt="" class="wp-image-1212" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-1024x887.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-300x260.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022-768x665.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/photo_2024-12-21_21-18-2022.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg" alt="" class="wp-image-1208" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Zhang-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg" alt="" class="wp-image-1207" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Yassir_SW1-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg" alt="" class="wp-image-1206" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mansour-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-</figure>
-</div></div>
-
-
-
-<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-6ebff40a8e924e4d2546eb8790dfb999">These outputs were compiled to present the mapping progress to the corporate management board. I was responsible for the layout and data preparation aspects of this presentation while other team members executed the core mapping work.</p>
-
-
-
-<p class="has-black-color has-text-color has-link-color has-medium-font-size wp-elements-ecedf913a5ad16ed8138bcf2f50a5664">I did this while working as a Database Geologist.</p>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//1203-2/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Flourite delination and Mapping plan</title>
-		<link>https://triplem45.github.io/M.I.Mukhtat//flourite-delination-and-mapping-plan/</link>
-					<comments>https://triplem45.github.io/M.I.Mukhtat//flourite-delination-and-mapping-plan/#respond</comments>
-		
-		<dc:creator><![CDATA[root]]></dc:creator>
-		<pubDate>Thu, 10 Jun 2021 14:58:21 +0000</pubDate>
-				<category><![CDATA[ArcMap]]></category>
-		<category><![CDATA[DIP]]></category>
-		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1195</guid>
-
-					<description><![CDATA[This preliminary mapping plan, developed during the early stages of the ore feasibility study, was generated using digitized outcrop data derived from satellite imagery and existing literature]]></description>
-										<content:encoded><![CDATA[
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="724" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-1024x724.jpg" alt="" class="wp-image-888" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-1024x724.jpg 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-300x212.jpg 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-768x543.jpg 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-1536x1086.jpg 1536w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/Mapping_Sheet-2048x1448.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
-
-
-
-<p></p>
-
-
-
-<p class="has-medium-font-size">This preliminary mapping plan, developed during the early stages of the ore feasibility study, was generated using digitized outcrop data derived from satellite imagery and existing literature</p>
-
-
-
-<p></p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//flourite-delination-and-mapping-plan/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
