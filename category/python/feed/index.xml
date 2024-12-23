@@ -12,7 +12,7 @@
 	<atom:link href="https://triplem45.github.io/M.I.Mukhtat//category/python/feed/" rel="self" type="application/rss+xml" />
 	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
 	<description>GIS Portfolio</description>
-	<lastBuildDate>Sun, 22 Dec 2024 16:41:09 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 23 Dec 2024 07:15:30 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,7 +21,7 @@
 	<generator>https://wordpress.org/?v=6.7.1</generator>
 
 <image>
-	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr.png</url>
+	<url>https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/9II7hq-LogoMakr-e1734941260861.png</url>
 	<title>Python &#8211; Mohammed I. Mukhtar</title>
 	<link>https://triplem45.github.io/M.I.Mukhtat/</link>
 	<width>32</width>
@@ -68,6 +68,454 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//geospatial-data-manipulation-with-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title> Seasonal Weather Anomalies of Using Pandas</title>
+		<link>https://triplem45.github.io/M.I.Mukhtat//seasonal-weather-anomalies-of-using-pandas-sodankyla-weather-station-in-northern-finland/</link>
+					<comments>https://triplem45.github.io/M.I.Mukhtat//seasonal-weather-anomalies-of-using-pandas-sodankyla-weather-station-in-northern-finland/#respond</comments>
+		
+		<dc:creator><![CDATA[root]]></dc:creator>
+		<pubDate>Mon, 11 Nov 2024 06:15:27 +0000</pubDate>
+				<category><![CDATA[Data Analysis]]></category>
+		<category><![CDATA[Environmental Monitoring]]></category>
+		<category><![CDATA[Python]]></category>
+		<guid isPermaLink="false">https://triplem45.github.io/M.I.Mukhtat//?p=1246</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<p></p>
+
+
+
+<p></p>
+
+
+
+<div class="wp-block-cover alignfull is-light" style="margin-top:0;padding-top:5vw;padding-right:5vw;padding-bottom:5vw;padding-left:5vw"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim" style="background-color:#e68b14"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p class="has-text-align-center has-x-large-font-size" style="font-style:italic;font-weight:1000;text-transform:uppercase"><strong>The goal</strong></p>
+
+
+
+<p>This exercise is part of the Geo-python course at the University of Helsinki, Finland.</p>
+
+
+
+<p>The purpose is &nbsp;to create a four-panel plot showing the seasonal temperature anomalies for winter, spring, summer, and autumn for the years 1909-2019</p>
+
+
+
+<p>The&nbsp;raw data&nbsp;contains daily temperature data from Sodankylä, in northern Finland, from January 1908 to October 2020. The data was downloaded from the&nbsp;<a href="https://www.ncdc.noaa.gov/cdo-web/datasets#GHCND">NOAA Global Historical Climate Network database</a>&nbsp;as a text file. </p>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-b07e55a758387a7b85df35616d54cbdf" style="font-size:20px"><strong>Adding the pandas and matplotlib libraries</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">import pandas as pd
+pd.options.mode.copy_on_write = True
+import matplotlib.pyplot as plt</pre></div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+
+
+
+<p class="has-black-color has-text-color has-link-color wp-elements-fb349871be7fb4dc647dbc257903d76d" style="font-size:20px"><strong>1. Reading the provided data file using pandas and converting missing values to NA.</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Assign the file path to a varible fp
+fp = r&quot;data/2315676.txt&quot;
+
+# Read the data file as pandas DataFrame
+
+data =pd.read_csv(
+    fp,
+    usecols= [&quot;DATE&quot;, &quot;TAVG&quot;, &quot;TMAX&quot;, &quot;TMIN&quot;],
+    skiprows=[1],
+    na_values=-9999,
+    sep='\s+',
+    parse_dates = [&quot;DATE&quot;],   
+)</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="958" height="681" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-2.png" alt="" class="wp-image-1262" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-2.png 958w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-2-300x213.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-2-768x546.png 768w" sizes="(max-width: 958px) 100vw, 958px" /></figure>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+
+
+
+<p style="font-size:20px"><strong>2. Filling in the missing values in the <code>TAVG</code> column with estimates of the average daily temperature, and dropping any average daily temperatures that are still missing.</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;disableCopy&quot;:true,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Creating a new column to store values where the TAVG is missing using TMAX and TMIN
+
+data[&quot;TEMP_F&quot;] = 0.0
+
+&quot;&quot;&quot; To find and replace the rows where TAVG is NaN 
+    and Both TMAX and TMIN are not NaN with the average of TMAX and TMIN &quot;&quot;&quot;
+
+data.loc[(data[&quot;TAVG&quot;].isna()) &amp; (data[&quot;TMAX&quot;].notna()) &amp; (data[&quot;TMAX&quot;].notna()), &quot;TEMP_F&quot;] = (data[&quot;TMAX&quot;] + data[&quot;TMIN&quot;]) / 2
+
+# And for rows where TAVG is not NaN, add the TAVG to the TEMP column
+
+data.loc[data[&quot;TAVG&quot;].notna(), &quot;TEMP_F&quot;] = data[&quot;TAVG&quot;]</pre></div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Test if there are still NaN values in the TEMP column
+data[&quot;TEMP_F&quot;].hasnans</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="962" height="46" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-1.png" alt="" class="wp-image-1260" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-1.png 962w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-1-300x14.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-1-768x37.png 768w" sizes="(max-width: 962px) 100vw, 962px" /></figure>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># and The number of NaN values
+NaN_values = data[&quot;TEMP_F&quot;].isna().sum()
+print(NaN_values)</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="965" height="45" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-3.png" alt="" class="wp-image-1263" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-3.png 965w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-3-300x14.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-3-768x36.png 768w" sizes="(max-width: 965px) 100vw, 965px" /></figure>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Using the dropna() function and the subset parameter to to process the NaN values by the TEMP_F column 
+data = data.dropna(subset=[&quot;TEMP_F&quot;])</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">#chec again if there are any NaN left
+data[&quot;TEMP_F&quot;].hasnans</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="959" height="57" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-4.png" alt="" class="wp-image-1264" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-4.png 959w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-4-300x18.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-4-768x46.png 768w" sizes="(max-width: 959px) 100vw, 959px" /></figure>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+</div></div>
+
+
+
+<div class="wp-block-cover alignfull is-light" style="margin-top:0;padding-top:48px;padding-right:5vw;padding-bottom:48px;padding-left:5vw"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(180deg,rgb(0,0,0) 39%,rgb(83,80,123) 39%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading has-white-color has-text-color has-link-color wp-elements-b65d53a88c2ae4cdf3227fba53fde332" style="font-size:20px">3. <strong>Defining a function to convert temperatures in Fahrenheit to Celsius.</strong></h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">def far_to_cel(tempF):
+    &quot;&quot;&quot;Function to convert Fahrenheit to Celsius.
+
+    Parameters
+    ----------
+
+    tempF: int | float
+        Input temperature in Fahrenheit (should be a number)
+
+    Returns
+    -------
+
+    Temperature in Celsius (float)
+    &quot;&quot;&quot;
+
+    # Convert the Fahrenheit into Celsius
+    tempC = (tempF - 32) / 1.8
+
+    return tempC</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Creating a new Column TEMP_C to store the temperature in Celsius degree
+data[&quot;TEMP_C&quot;] = 0.0
+
+# Assigning the converted value to the column 
+#by calculating it from the TEMP_F column using the created function
+data[&quot;TEMP_C&quot;] = data[&quot;TEMP_F&quot;].apply(far_to_cel)</pre></div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+
+
+
+<h4 class="wp-block-heading has-white-color has-text-color has-link-color has-medium-font-size wp-elements-673d5a8f87fadf2d00ec5aff07ba4f4f" id="4.-Calculate-seasonal-average-temperatures-for-each-season-in-every-year-(e.g.,-Winter-1909,-Spring-1909,-Summer-1909,-...)"><strong>4. Calculate seasonal average temperatures for each season in every year (e.g., Winter 1909, Spring 1909, Summer 1909, &#8230;)</strong></h4>
+
+
+
+<p class="has-white-color has-text-color has-link-color wp-elements-f413521f54c3a83c94ee588fd259fa5b">             The seasons should include the following months: </p>
+
+
+
+<p class="has-white-color has-text-color has-link-color wp-elements-da4a346001b6e9cb757eedfdd86d5408">                            Winter: December, January, February<br>                            Spring: March, April, May<br>                           Summer: June. July, August<br>                           Autumn: September, October, November</p>
+
+
+
+<p><a href="http://localhost:8888/lab/tree/Geo-PythonCourse-UniversityofHelsinki/python-environments/my-wrok/exercise/final-exercise-triplem45/seasonal-weather-anomalies.ipynb#4.-Calculate-seasonal-average-temperatures-for-each-season-in-every-year-(e.g.,-Winter-1909,-Spring-1909,-Summer-1909,-...)"></a></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">&quot;&quot;&quot;
+We will create a new column MONTHS that we will store the months 
+by grabbing it from the DATE column,
+later we will use this column to group the data by the Season and calculate it is mean
+&quot;&quot;&quot;
+# Parse the Month temporal components from DATE to column MONTH
+data[&quot;MONTH&quot;] = data[&quot;DATE&quot;].dt.month
+# and for Year 
+data[&quot;YEAR&quot;] = data[&quot;DATE&quot;].dt.year
+data[&quot;SEASON&quot;] = pd.Series(dtype=&quot;string&quot;)</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Classifying the data according to te month it was quired to Winter, Spring, Summer and Autumn
+
+# Monthes 12, 1, and 2 is Winter
+data.loc[(data[&quot;MONTH&quot;] == 12) | (data[&quot;MONTH&quot;] &lt; 3), &quot;SEASON&quot;] = &quot;Winter&quot;
+
+# Monthes 3 to 5 is Spring
+data.loc[(data[&quot;MONTH&quot;] &gt;= 3) &amp; (data[&quot;MONTH&quot;] &lt; 6), &quot;SEASON&quot;] = &quot;Spring&quot;
+
+# Monthes 6 to 8 is Summer
+data.loc[(data[&quot;MONTH&quot;] &gt;= 6) &amp; (data[&quot;MONTH&quot;] &lt; 9), &quot;SEASON&quot;] = &quot;Summer&quot;
+
+# Monthes 9 to 11 is Autumn
+data.loc[(data[&quot;MONTH&quot;] &gt;= 9) &amp; (data[&quot;MONTH&quot;] &lt; 12), &quot;SEASON&quot;] = &quot;Autumn&quot;</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># making sure different 4 values are stores
+data[&quot;SEASON&quot;].unique()</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="954" height="112" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-5.png" alt="" class="wp-image-1265" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-5.png 954w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-5-300x35.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-5-768x90.png 768w" sizes="(max-width: 954px) 100vw, 954px" /></figure>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">YearlySeason = data.groupby(
+  	[&quot;YEAR&quot;, &quot;SEASON&quot;])[&quot;TEMP_C&quot;].mean().reset_index().rename(columns={&quot;TEMP_C&quot; : &quot;TEMP_YearlyS&quot;}
+)
+
+YearlySeason</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="960" height="690" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-6.png" alt="" class="wp-image-1266" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-6.png 960w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-6-300x216.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-6-768x552.png 768w" sizes="(max-width: 960px) 100vw, 960px" /></figure>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+
+
+
+<h2 class="wp-block-heading has-black-color has-text-color has-link-color wp-elements-4539e98f97c0a2aa6254abb7d0397ad0" style="font-size:20px">5. Calculate seasonal average temperatures for the reference period 1951-1980 (e.g., 4 values in total, one for each season).</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">&quot;&quot;&quot; Grouping every data to the season it was recorded on &quot;&quot;&quot;
+# Selecting the data for the period between 1951 and 198
+selected = data.loc[(data[&quot;YEAR&quot;] &gt;= 1951) &amp; (data[&quot;YEAR&quot;] &lt;= 1980)]
+
+grouped51_80 = selected.groupby(&quot;SEASON&quot;)[&quot;TEMP_C&quot;].mean().reset_index().rename(columns={&quot;TEMP_C&quot;: &quot;TEMP_AvSe&quot;})
+grouped51_80</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="961" height="284" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-7.png" alt="" class="wp-image-1267" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-7.png 961w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-7-300x89.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-7-768x227.png 768w" sizes="(max-width: 961px) 100vw, 961px" /></figure>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">for season, temp in zip(grouped51_80[&quot;SEASON&quot;], grouped51_80[&quot;TEMP_AvSe&quot;]):
+    print(f&quot; The average seasonal temerature for {season} was {temp:.2f} °C&quot;)</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="959" height="128" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-8.png" alt="" class="wp-image-1268" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-8.png 959w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-8-300x40.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-8-768x103.png 768w" sizes="(max-width: 959px) 100vw, 959px" /></figure>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">&quot;&quot;&quot; Calculating the mean temperature for the 4 seasons of the whole period &quot;&quot;&quot;
+# For winter
+Winter_average = data[&quot;TEMP_C&quot;].loc[data[&quot;SEASON&quot;] == &quot;Winter&quot;].mean()
+print(f&quot;The mean temperature for winter season for the recorded period is {Winter_average.round(2)} °C.&quot;)
+
+# For Spring
+Spring_average = data[&quot;TEMP_C&quot;].loc[data[&quot;SEASON&quot;] == &quot;Spring&quot;].mean()
+print(f&quot;The mean temperature for Spring season for the recorded period is {Spring_average.round(2)} °C.&quot;)
+
+# For Summer
+Summer_average = data[&quot;TEMP_C&quot;].loc[data[&quot;SEASON&quot;] == &quot;Summer&quot;].mean()
+print(f&quot;The mean temperature for Summer season for the recorded period is {Summer_average.round(2)} °C.&quot;)
+
+# For Autumn
+Autumn_average = data[&quot;TEMP_C&quot;].loc[data[&quot;SEASON&quot;] == &quot;Autumn&quot;].mean()
+print(f&quot;The mean temperature for Autumn season for the recorded period is {Autumn_average.round(2)} °C.&quot;)
+</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="969" height="123" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-9.png" alt="" class="wp-image-1269" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-9.png 969w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-9-300x38.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-9-768x97.png 768w" sizes="(max-width: 969px) 100vw, 969px" /></figure>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+</div></div>
+
+
+
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:5vw;padding-right:5vw;padding-bottom:5vw;padding-left:5vw;min-height:66vh;aspect-ratio:unset;"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(90deg,rgb(64,224,208) 0%,rgb(255,140,0) 52%,rgb(255,0,0) 100%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<h2 class="wp-block-heading has-black-color has-text-color has-link-color wp-elements-b21e835fbb6337f55d3411c29093a60f" style="font-size:20px"><strong>6. Calculate seasonal temperature anomalies for each year.</strong></h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">&quot;&quot;&quot;
+The Seasonal temperature anomaly is calculated as the difference between the temperature for a 
+given season of a certain yearn(TEMP_C in YearlySeason) and the corresponding Seosnal 
+reference temperature (TEMP_AvSe column grouped51_80)
+&quot;&quot;&quot;
+
+#Choosing the same years
+YearlySeason =  YearlySeason.loc[(YearlySeason[&quot;YEAR&quot;] &gt;= 1951) &amp; (YearlySeason[&quot;YEAR&quot;] &lt;= 1980)]
+
+# Make a table join between YearlySeason and grouped51_80 to calcualte the anomalis 
+SeaonalAnom = YearlySeason.merge(grouped51_80, on=&quot;SEASON&quot;)
+
+# Finding the anamolies by calculating the difference between YearlySeason from grouped51_80 in anew column ANOMALY
+SeaonalAnom[&quot;ANOMALY&quot;] = SeaonalAnom[&quot;TEMP_YearlyS&quot;] - SeaonalAnom[&quot;TEMP_AvSe&quot;]</pre></div>
+
+
+
+<hr class="wp-block-separator has-text-color has-black-color has-alpha-channel-opacity has-black-background-color has-background is-style-wide"/>
+</div></div>
+
+
+
+<div class="wp-block-cover alignfull" style="margin-top:0;padding-top:5vw;padding-right:5vw;padding-bottom:5vw;padding-left:5vw;min-height:66vh;aspect-ratio:unset;"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim has-background-gradient" style="background:linear-gradient(90deg,rgb(75,19,79) 50%,rgb(35,74,20) 50%,rgb(255,239,186) 50%)"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<p style="font-size:20px"><strong>7. Plotting the data</strong> </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}">&quot;&quot;&quot;
+Dividing the SeaonalAnom data to four parts [Winter, Spring, Summer, Autumn] for ploting
+&quot;&quot;&quot;
+Winter = SeaonalAnom[SeaonalAnom[&quot;SEASON&quot;] == &quot;Winter&quot;]
+
+Spring = SeaonalAnom[SeaonalAnom[&quot;SEASON&quot;] == &quot;Spring&quot;]
+
+Summer= SeaonalAnom[SeaonalAnom[&quot;SEASON&quot;] == &quot;Summer&quot;]
+
+Autumn = SeaonalAnom[SeaonalAnom[&quot;SEASON&quot;] == &quot;Autumn&quot;]</pre></div>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Testing the result
+Winter.head()</pre></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="961" height="324" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-10.png" alt="" class="wp-image-1270" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-10.png 961w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-10-300x101.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/image-10-768x259.png 768w" sizes="(max-width: 961px) 100vw, 961px" /></figure>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror" data-setting="{&quot;showPanel&quot;:true,&quot;languageLabel&quot;:&quot;language&quot;,&quot;fullScreenButton&quot;:true,&quot;copyButton&quot;:false,&quot;mode&quot;:&quot;python&quot;,&quot;mime&quot;:&quot;text/x-python&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true,&quot;fileName&quot;:&quot;Python&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;maxHeight&quot;:&quot;400px&quot;,&quot;modeName&quot;:&quot;python&quot;}"># Create the figure and subplot axes
+fig, axs = plt.subplots(nrows=2, ncols=2, figsize=(12, 8))
+
+# Define variables to easily refer to axes
+ax11 = axs[0][0]
+ax12 = axs[0][1]
+ax21 = axs[1][0]
+ax22 = axs[1][1]
+
+# Set plot line width
+line_width = 1.5
+
+# Plot data
+
+Winter.plot(
+    y= &quot;ANOMALY&quot;,
+    x= &quot;YEAR&quot;,
+    ax=ax11,
+    c=&quot;blue&quot;,
+    xlim=[1951, 1980],
+    ylabel = &quot;Temperature Anomly&quot;,
+    xlabel= &quot;Year&quot;,
+    grid= True,
+    lw=line_width
+)
+
+
+Spring.plot(
+    y= &quot;ANOMALY&quot;,
+    x= &quot;YEAR&quot;,
+    ax=ax12,
+    c=&quot;g&quot;,
+     grid= True,
+    xlabel= &quot;Year&quot;,
+    xlim=[1951, 1980],
+    lw=line_width
+)
+
+Summer.plot(
+    ax=ax21,
+    y= &quot;ANOMALY&quot;,
+    x= &quot;YEAR&quot;,
+    ylabel = &quot;Temperature Anomly&quot;,
+    xlabel= &quot;Year&quot;,
+    c=&quot;r&quot;,
+    grid= True,
+    xlim=[1951, 1980],
+    lw=line_width
+)
+
+Autumn.plot(
+    ax=ax22,
+    y= &quot;ANOMALY&quot;,
+    x= &quot;YEAR&quot;,
+    xlabel= &quot;Year&quot;,
+    c=&quot;#964B00&quot;,
+    grid= True,
+    xlim=[1951, 1980],
+    lw=line_width
+)
+
+# Subplot Title 
+fig.suptitle(&quot;1951-1980 Seasonal anomalies&quot;)
+
+#Adding text to plots
+ax11.text(1961.5, 4, &quot;Winter&quot;, c=&quot;b&quot;, fontsize= 20)
+ax12.text(1957, -2.5, &quot;Spring&quot;, c=&quot;g&quot;, fontsize= 20)
+ax21.text(1961.5, 1, &quot;Summer&quot;, c=&quot;r&quot;, fontsize= 20)
+ax22.text(1957, -2.5, &quot;Autumn&quot;, c=&quot;#964B00&quot;, fontsize= 20)
+
+plt.show()</pre></div>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="683" src="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/FinalExcersise-1024x683.png" alt="" class="wp-image-1272" srcset="https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/FinalExcersise-1024x683.png 1024w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/FinalExcersise-300x200.png 300w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/FinalExcersise-768x512.png 768w, https://triplem45.github.io/M.I.Mukhtat//wp-content/uploads/2024/12/FinalExcersise.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://triplem45.github.io/M.I.Mukhtat//seasonal-weather-anomalies-of-using-pandas-sodankyla-weather-station-in-northern-finland/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
